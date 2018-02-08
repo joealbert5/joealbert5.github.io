@@ -7,16 +7,25 @@
     <th width=100>Phototransistor Schematic (instrument pitch controller)</th>
   </tr>
   <tr>
-  <th><img src="https://i.imgur.com/6RltPuT.png"></img></th>
-  <th><img src="https://i.imgur.com/cSwIhrG.png"></img></th>
+  	<th><img src="https://i.imgur.com/6RltPuT.png"></img></th>
+  	<th><img src="https://i.imgur.com/cSwIhrG.png"></img></th>
   </tr>
   <tr>
+  	<th width=300>The following schematic shows the button circuit that controls what notes the electronic brass instrument is playing. Just like a trumpet or a tuba, it has 3 buttons for the 3 valves of the instrument. Three digital pins are pulled to high when its respective button is pushed down, and it is pulled to low when the buttons are not being pressed. The code in ‘instrument.ino’ determines what note the player wants to play by using combinational logic.</th>
+  	<th width=300>The following schematic displays the circuit that determines the range of notes that can be played, which simulates a brass player changing his or her embouchure. The voltage across the resistor is attached to an analog input pin. This voltage is changed when a light is shined on the phototransistor. The greater the intensity of the light, the higher the note that is played. The voltage across the resistor ranges from 0 V to 2 V, and the voltage ranges are split up to discretize the embouchure positions.</th>
+  </tr>
+  <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+  <tr style:"margin-top:200px;">
   	<th>Speaker Schematic</th>
   	<th>Motor Schematic</th>
   </tr>
   <tr>
 	<th><img src="https://i.imgur.com/PqaPzmT.png"></img></th>
 	<th><img src="https://i.imgur.com/5cE4WcP.png"></img></th>
+  </tr>
+  <tr>
+  <th width=300>The following schematic shows the circuit of the speaker. The code in ‘intrument.ino’ sends a square wave with the desired note frequency for the speaker to output. This note frequency is determined by the analog reading from the phototransistor circuit and the button logic determined by the button circuit. </th>
+  <th width=300>The FS90R motor is connected to the D0 pin of the ESP8266MOD Wi-Fi module. The input provided by the web server is connected to the D4 pin of the Wi-Fi module. When the egg shaker robot is activated by the web server (the server sends “1”), the robot will turn on and play the song “Low Rider” from the show George Lopez. When it is off (the server sends “0”), the robot will shake at a set fast tempo.</th>
   </tr>
 </table>
 </html>
